@@ -32,7 +32,7 @@ Traditional security tooling hits a ceiling: scripts are brittle, single agents 
 |-----------|---------------------|------------|
 | APK vulnerability analysis | Manual MobSF + engineer review | Autonomous agent: upload → analyze → report |
 | Penetration testing | Fixed scripts, static playbooks | Dynamic DeepAgents that adapt to findings in real time |
-| Tool integration | Custom glue code per tool | 200+ tools via MCP Protocol, zero glue |
+| Tool integration | Custom glue code per tool | MCP Protocol supports 200+ security tools |
 | Scale | Linear headcount growth | Agent teams that multiply capacity |
 
 > JoySafeter defines a new paradigm: **AI-driven Security Operations (AISecOps)** — where multi-agent collaboration, cognitive memory, and scenario-matched skills replace manual coordination.
@@ -98,11 +98,13 @@ This dynamic decision-making — where the agent adapts its next step based on w
 </td>
 <td width="50%">
 
-### 200+ Security Tools, Ready to Use
+### MCP Protocol for Security Tools
 
-- Pre-integrated **Nmap, Nuclei, Trivy**, and more
-- **MCP Protocol** — extend with any tool via Model Context Protocol
+- **MCP Protocol** — connect to security tools (Nmap, Nuclei, Trivy, etc.) via Model Context Protocol
+- **Self-configured** — add your own MCP servers through the UI to access tools
+- **Demo servers** — includes example MCP servers for testing (Demo, Scanner, JEB)
 - **30+ pre-built skills** — penetration testing, document analysis, cloud security, and more
+- **Note**: Security tools require external MCP server configuration (see [Tutorial 02](docs/tutorials/02-mcp-service-setup.md))
 
 </td>
 </tr>

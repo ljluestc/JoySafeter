@@ -62,7 +62,7 @@ flowchart TB
 
         subgraph MCP["MCP Tool Ecosystem"]
             direction TB
-            MCPServers["MCP Servers<br/>200+ Security Tools"]
+            MCPServers["MCP Servers<br/>User-configured Tools"]
             Tools["Tool Registry<br/>Unified Management"]
         end
     end

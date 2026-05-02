@@ -2,6 +2,8 @@
 
 > **适合人群**：希望将外部工具（如 Nmap、Nuclei、Burp Suite 扩展等安全工具）通过 MCP 协议集成到 Agent 中的用户。
 
+> **重要说明**：JoySafeter 的 MCP 协议支持连接 200+ 安全工具，但这些工具**不是预配置的**。您需要自己配置 MCP Server 来连接外部工具。默认部署包含的 Demo MCP Server、Scanner MCP、JEB MCP 仅供演示和测试使用。
+
 ---
 
 ## 场景说明
