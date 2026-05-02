@@ -119,6 +119,11 @@ const en = {
       addMcp: 'Add MCP',
       connectNewServer: 'Connect New Server',
       connectNewServerDescription: 'Extend capabilities with external MCP servers',
+      mcpToolsDiscoveryTitle: 'Only demo MCP servers are currently configured',
+      mcpToolsDiscoveryDescription:
+        'The default setup includes DEMO_MCP_SERVER, SCANNER_MCP, and JEB_MCP for quick verification.',
+      mcpToolsDiscoveryFormatHint:
+        'The 200+ security tools become available after connecting additional MCP servers and selecting tools in server::tool format.',
       panelUnderConstruction: 'Panel Under Construction',
       systemOnline: 'System Online',
       deleteMcpConfirm: 'Are you sure you want to delete this MCP server?',

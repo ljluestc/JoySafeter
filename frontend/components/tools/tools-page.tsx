@@ -1,6 +1,6 @@
 'use client'
 
-import { Plus, Loader2 } from 'lucide-react'
+import { CircleHelp, Plus, Loader2 } from 'lucide-react'
 import { useState } from 'react'
 
 
@@ -26,6 +26,10 @@ export function ToolsPage() {
   const { data: builtinTools = [], isLoading: isLoadingBuiltin } = useBuiltinTools()
   const deleteMcpServer = useDeleteMcpServer()
   const updateMcpServer = useUpdateMcpServer()
+  const defaultDemoServerNames = new Set(['DEMO_MCP_SERVER', 'SCANNER_MCP', 'JEB_MCP'])
+  const hasMcpServers = mcpServers.length > 0
+  const hasOnlyDemoMcpServers =
+    hasMcpServers && mcpServers.every((server) => defaultDemoServerNames.has(server.name))
 
   const handleDelete = async (serverId: string) => {
     if (!confirm(t('settings.deleteMcpConfirm'))) {
@@ -108,6 +112,24 @@ export function ToolsPage() {
           </div>
         ) : (
           <>
+            {hasOnlyDemoMcpServers && (
+              <div className="rounded-xl border border-[var(--brand-200)] bg-[var(--brand-50)] p-4">
+                <div className="flex items-start gap-3">
+                  <CircleHelp className="mt-0.5 h-4 w-4 text-[var(--brand-600)]" />
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-semibold text-[var(--brand-700)]">
+                      {t('settings.mcpToolsDiscoveryTitle')}
+                    </h4>
+                    <p className="text-xs leading-5 text-[var(--brand-700)]">
+                      {t('settings.mcpToolsDiscoveryDescription')}
+                    </p>
+                    <p className="text-xs leading-5 text-[var(--brand-700)]">
+                      {t('settings.mcpToolsDiscoveryFormatHint')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
             {/* Built-in Tools List (from Tool API) */}
             {builtinTools.length > 0 && (
               <div className="space-y-3">

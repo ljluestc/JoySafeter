@@ -119,6 +119,11 @@ const zh = {
       addMcp: '添加 MCP',
       connectNewServer: '连接新服务器',
       connectNewServerDescription: '通过外部 MCP 服务器扩展功能',
+      mcpToolsDiscoveryTitle: '当前仅配置了示例 MCP 服务',
+      mcpToolsDiscoveryDescription:
+        '默认部署只包含 DEMO_MCP_SERVER、SCANNER_MCP、JEB_MCP，用于快速验证 MCP 能力。',
+      mcpToolsDiscoveryFormatHint:
+        '接入更多外部 MCP Server 后即可加载文档提到的 200+ 安全工具，并在节点中使用 server::tool 格式引用。',
       panelUnderConstruction: '面板正在建设中',
       systemOnline: '系统在线',
       deleteMcpConfirm: '确定要删除此 MCP 服务器吗？',
